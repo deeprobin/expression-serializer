@@ -1,0 +1,143 @@
+\documentclass[makeidx]{article}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\makeindex
+\title{Binary LINQ Expression Format Specification}
+\author{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newpage
+
+\markright{Binary LINQ Expression Format Specification}
+
+\section{Scope}
+This standard specifies the format of the Binary LINQ Expression Format Specification
+
+\section{General Expression Format}
+
+1. Expression Type of Node
+2. Expression Core
+
+\section{Expression Types}
+
+\begin{center}
+\begin{table}
+\begin{tabular}{|c|c|}
+Node Id & Enum Variant (\hyperlink{https://docs.microsoft.com/en-us/dotnet/api/system.linq.expressions.expressiontype?view=net-6.0}{ExpressionType}) \\
+\hline
+0 & Add \\
+1 & AddChecked \\
+2 & And \\
+3 & AndAlso \\
+4 & ArrayLength \\
+5 & ArrayIndex \\
+6 & Call \\
+7 & Coalesce \\
+8 & Conditional \\
+9 & Constant \\
+10 & Convert \\
+11 & ConvertChecked \\
+12 & Divide \\
+13 & Equal \\
+14 & ExclusiveOr \\
+15 & GreaterThan \\
+16 & GreaterThanOrEqual \\
+17 & Invoke \\
+18 & Lambda \\
+19 & LeftShift \\
+20 & LessThan \\
+21 & LessThanOrEqual \\
+
+\end{tabular}
+\begin{tabular}{|c|c|}
+Node Id & Enum Variant (\hyperlink{https://docs.microsoft.com/en-us/dotnet/api/system.linq.expressions.expressiontype?view=net-6.0}{ExpressionType}) \\
+\hline
+22 & ListInit \\
+23 & MemberAccess \\
+24 & MemberInit \\
+25 & Modulo \\
+26 & Multiply \\
+27 & MultiplyChecked \\
+28 & Negate \\
+29 & UnaryPlus \\
+30 & NegateChecked \\
+31 & New \\
+32 & NewArrayInit \\
+33 & NewArrayBounds \\
+34 & Not \\
+35 & NotEqual \\
+36 & Or \\
+37 & OrElse \\
+38 & Parameter \\
+39 & Power \\
+40 & Quote \\
+41 & RightShift \\
+42 & Subtract \\
+\end{tabular}
+\begin{tabular}{|c|c|}
+Node Id & Enum Variant (\hyperlink{https://docs.microsoft.com/en-us/dotnet/api/system.linq.expressions.expressiontype?view=net-6.0}{ExpressionType}) \\
+\hline
+43 & SubtractChecked \\
+44 & TypeAs \\
+45 & TypeIs \\
+46 & Assign \\
+47 & Block \\
+48 & DebugInfo \\
+49 & Decrement \\
+50 & Dynamic \\
+51 & Default \\
+52 & Extension \\
+53 & Goto \\
+54 & Increment \\
+55 & Index \\
+56 & Label \\
+57 & RuntimeVariables \\
+58 & Loop \\
+59 & Switch \\
+60 & Throw \\
+61 & Try \\
+62 & Unbox \\
+63 & AddAssign \\
+
+\end{tabular}
+\begin{tabular}{|c|c|}
+Node Id & Enum Variant (\hyperlink{https://docs.microsoft.com/en-us/dotnet/api/system.linq.expressions.expressiontype?view=net-6.0}{ExpressionType}) \\
+\hline
+64 & AndAssign \\
+65 & DivideAssign \\
+66 & ExclusiveOrAssign \\
+67 & LeftShiftAssign \\
+68 & ModuloAssign \\
+69 & MultiplyAssign \\
+70 & OrAssign \\
+71 & PowerAssign \\
+72 & RightShiftAssign \\
+73 & SubtractAssign \\
+74 & AddAssignChecked \\
+75 & MultiplyAssignChecked \\
+76 & SubtractAssignChecked \\
+77 & PreIncrementAssign \\
+78 & PreDecrementAssign \\
+79 & PostIncrementAssign \\
+80 & PostDecrementAssign \\
+81 & TypeEqual \\
+82 & OnesComplement \\
+83 & IsTrue \\
+84 & IsFalse
+\end{tabular}
+\end{table}
+\end{center}
+
+\end{document}
